@@ -4,6 +4,8 @@
 /* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
 
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Life+Savers:wght@400;700&family=Roboto:wght@300;700&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -14,14 +16,15 @@ use the fonts in other ways in the font hierarchy etc. */
 
 /* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+  --bg-color: #d44884;
+  --link-color: #33bcd4;
+  --link-hover-color: #277987;
+  --color-4: #87204d;
+  --color-5: #d4c85d;
 
-  --primary-font: "Open Sans", sans-serif;
-  --secondary-font: "Droid Serif", serif;
+  --primary-font: "Chelsea Market", cursive;
+  --secondary-font: "Roboto", serif;
+  --subHeader-font: "Life Savers", cursive;
   --main-text-color: #000;
 
   --white-space: 1rem;
@@ -215,8 +218,8 @@ button:focus-within {
 }
 
 .h2-sample {
-  font-family: var(--secondary-font);
-  font-style: italic;
+  font-family: var(--subHeader-font);
+  font-weight: bold;
   font-size: 1.25rem;
 }
 
@@ -261,6 +264,57 @@ p[class*="font-details-"] {
 
 footer {
   font-style: italic;
+}
+
+.hatContainer {
+}
+.hatSprite {
+  background-image: url(../assets/sombrerov1.svg);
+  width: max(5vw, 60px);
+  height: max(5vw, 60px);
+  background-size: contain;
+  position: absolute;
+  right: 2vw;
+  top: 2vw;
+}
+
+.falling {
+  animation-name: fall;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-delay: 10s;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(0vw);
+  }
+
+  to {
+    transform: translateY(80vh);
+  }
+}
+
+.penduling {
+  animation-name: pendul;
+  animation-duration: 0.5s;
+  animation-iteration-count: 6;
+  animation-timing-function: ease-in-out;
+  transform-origin: top center;
+  animation-delay: 10s;
+}
+
+@keyframes pendul {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(15deg);
+  }
 }
 
 @media (min-width: 800px) {
