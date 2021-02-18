@@ -290,7 +290,7 @@ footer {
   right: 1vw;
   background-color: white;
   border-radius: 50%;
-  top: 108vh;
+  top: 98vh;
 }
 
 .falling {
@@ -308,7 +308,7 @@ footer {
   }
 
   to {
-    transform: translateY(100vh);
+    transform: translateY(91vh);
   }
 }
 
