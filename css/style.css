@@ -366,6 +366,13 @@ div.chili {
   background-image: url(../assets/porkv2.svg);
   background-size: cover;
 }
+
+.pork:hover {
+  transition-duration: 1s;
+  transform: scale(10);
+  opacity: 0;
+}
+
 .chiken {
   background-image: url(../assets/chikenv2.svg);
   background-size: cover;
